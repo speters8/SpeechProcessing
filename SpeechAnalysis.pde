@@ -76,12 +76,16 @@ void mouseClicked() {
      }
     }
   }
-  if (pmouseX > 85 && pmouseX <= 140) {
+  else if (pmouseX > 85 && pmouseX <= 140) {
     if (pmouseY >= 20 && pmouseY <= 75) {
       print("Increase Zoom");
       if (zoom < ZMAX) {
         zoom = zoom*2;
       }
     }
+  }
+  else {
+    saveFrame();
+    println("frame saved");
   }
 }
